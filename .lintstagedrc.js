@@ -11,7 +11,7 @@ const buildFormatCommand = (filenames) =>
     .join(' ')} `;
 
 const buildSolhintCommand = (filenames) =>
-  `solhint --max-error 0 --ignore-path .gitignore ${filenames
+  `solhint --max-error 0 -c packages/contract/solhint.json --ignore-path .gitignore ${filenames
     .map((f) => path.relative(process.cwd(), f))
     .join(' ')} `;
 
