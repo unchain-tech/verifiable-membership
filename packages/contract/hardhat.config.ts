@@ -21,14 +21,14 @@ const config: HardhatUserConfig = {
   },
   networks: {
     hardhat: {},
-    goerli: {
-      url: process.env.STAGING_ALCHEMY_KEY,
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
+    // goerli: {
+    //   url: process.env.STAGING_ALCHEMY_KEY,
+    //   accounts:
+    //     process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    // },
   },
   typechain: {
-    outDir: '../client/src/libs/hardhat/types' && './typechain-types',
+    outDir: '../client/libs/hardhat/types' && './typechain-types',
     target: 'ethers-v5',
     alwaysGenerateOverloads: false,
     externalArtifacts: ['externalArtifacts/*.json'],

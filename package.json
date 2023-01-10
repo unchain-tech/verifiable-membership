@@ -29,12 +29,12 @@
     "pre-commit": "npx lint-staged"
   },
   "scripts": {
-    "client": "yarn workspace client",
-    "contract": "yarn workspace contract",
     "lint": "yarn run rome check .",
     "lint:fix": "yarn run rome check . --apply",
     "format": "yarn run rome format .",
     "format:fix": "yarn run rome format . --write",
+    "client": "yarn workspace client",
+    "contract": "yarn workspace contract",
     "test": "yarn workspace client test && yarn workspace contract test"
   },
   "packageManager": "yarn@3.3.1"
