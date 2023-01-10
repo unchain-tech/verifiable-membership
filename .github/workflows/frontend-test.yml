@@ -1,0 +1,13 @@
+name: frontend test
+
+on: [push]
+
+jobs:
+  contract-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup
+        run: yarn install --immutable
+      - name: jest
+        run: yarn workspace client test

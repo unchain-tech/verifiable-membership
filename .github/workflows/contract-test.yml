@@ -1,0 +1,15 @@
+name: hardhat test
+
+on: [push]
+
+jobs:
+  contract-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup
+        run: yarn install --immutable
+      - name: solhint scan
+        run: yarn workspace contract solhint
+      - name: integration_test
+        run: yarn workspace contract test
