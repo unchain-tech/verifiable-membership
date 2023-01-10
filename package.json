@@ -1,0 +1,41 @@
+{
+  "name": "unchain-membership",
+  "description": "Verifiable credentials for UNCHAIN community members",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unchain-dev/verifiable-membership.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unchain-dev/verifiable-membership/issues"
+  },
+  "author": "SHØ <neila@users.noreply.github.com> (https://github.com/neila)",
+  "contributors": [
+    "SHØ <neila@users.noreply.github.com> (https://github.com/neila)",
+    "mashharuki <avp.104.106.107@ae.auone-net.jp> (https://github.com/mashharuki)"
+  ],
+  "devDependencies": {
+    "lint-staged": "^13.1.0",
+    "rome": "^11.0.0",
+    "simple-git-hooks": "^2.8.1"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "scripts": {
+    "client": "yarn workspace client",
+    "contract": "yarn workspace contract",
+    "lint": "yarn run rome check .",
+    "lint:fix": "yarn run rome check . --apply",
+    "format": "yarn run rome format .",
+    "format:fix": "yarn run rome format . --write",
+    "test": "yarn workspace client test && yarn workspace contract test"
+  },
+  "packageManager": "yarn@3.3.1"
+}
