@@ -1,0 +1,16 @@
+node_modules
+coverage
+coverage.json
+.openzeppelin
+.DS_Store
+
+
+#Hardhat files
+cache
+artifacts
+dist
+
+#typechain
+typechain
+types
+typechain-types
