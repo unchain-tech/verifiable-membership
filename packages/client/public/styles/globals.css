@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-light text-base desktop:text-xl;
+  }
+  h1 {
+    @apply font-medium tracking-wider text-5xl desktop:text-8xl;
+  }
+  h2 {
+    @apply font-light tracking-wide text-xl desktop:text-3xl;
+  }
+  h3 {
+    @apply font-medium tracking-wide text-xl;
+  }
+  a {
+    @apply font-light text-base desktop:text-xl hover:underline;
+  }
+  p {
+    @apply font-normal leading-relaxed tracking-wider text-base desktop:text-xl;
+  }
+  button {
+    @apply font-medium tracking-widest text-base desktop:text-xl;
+  }
+  footer,
+  span {
+    @apply font-light tracking-wider;
+  }
+}
