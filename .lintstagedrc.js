@@ -17,6 +17,6 @@ const buildSolhintCommand = (filenames) =>
 
 module.exports = {
   '**/*.{js,jsx,ts,tsx}': [buildLintCommand],
-  '**/*': [buildFormatCommand],
+  '**/*.{js,jsx,ts,tsx,sol}': [buildFormatCommand],
   '**/*.sol': [buildSolhintCommand],
 };

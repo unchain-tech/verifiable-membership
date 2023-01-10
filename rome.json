@@ -1,0 +1,24 @@
+{
+  "linter": {
+    "enabled": true,
+    "ignore": [
+      "**/.gitignore"
+    ],
+    "rules": {}
+  },
+  "formatter": {
+    "enabled": true,
+    "ignore": [
+      "**/.gitignore"
+    ],
+    "indentStyle": "space",
+    "indentSize": 2
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "quoteProperties": "asNeeded",
+      "trailingComma": "all"
+    }
+  }
+}
