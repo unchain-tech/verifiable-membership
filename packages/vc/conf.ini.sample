@@ -1,0 +1,13 @@
+issuing_address=<YOUR_ADDRESS>
+verification_method=did:web:#######.storage.googleapis.com#key-1
+usb_name=.
+key_file=./keys/key_file.txt
+
+unsigned_certificates_dir=./data/unsigned_certificates
+blockchain_certificates_dir=./data/blockchain_certificates
+work_dir=./data/work
+
+chain = ethereum_goerli
+goerli_rpc_url = https://eth-goerli.g.alchemy.com/v2/####
+
+no_safe_mode
