@@ -7,13 +7,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        id: yarn-cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: setup
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
 
   scan:
     runs-on: ubuntu-latest
     needs: setup
     steps:
+      - uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: lint check
         run: yarn lint
       - name: solhint scan
@@ -26,6 +36,10 @@ jobs:
     needs: setup
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: hardhat test
         run: yarn workspace contract test
 
@@ -34,5 +48,9 @@ jobs:
     needs: setup
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: jest
         run: yarn workspace client test
