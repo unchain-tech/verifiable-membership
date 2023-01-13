@@ -1,4 +1,4 @@
-name: analyze test
+name: CI
 
 on: [push]
 
