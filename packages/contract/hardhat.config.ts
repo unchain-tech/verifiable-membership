@@ -35,7 +35,7 @@ const config: HardhatUserConfig = {
     dontOverrideCompile: false,
   },
   paths: {
-    artifacts: '../client/src/libs/hardhat/artifacts',
+    artifacts: '../client/libs/hardhat/artifacts',
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,

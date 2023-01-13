@@ -16,7 +16,12 @@ yarn workspace [workspace_name] [workspace_command]
 Uses [rome](https://rome.tools/). Config in `/rome.json`.
 
 ## Precommit hooks
-Uses [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks). Config in `/.lintstagedrc.js`
+Uses [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks). Config in `/.lintstagedrc.js`.
+
+Initialize with
+```
+yarn simple-git-hooks
+```
 
 ## Client
 - Next.js v13

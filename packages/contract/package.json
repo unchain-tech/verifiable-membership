@@ -3,12 +3,8 @@
     "version": "0.1.0",
     "description": "Verifiable credentials for UNCHAIN members.",
     "scripts": {
-        "lint": "yarn run rome check .",
-        "lint:fix": "yarn run rome check . --apply",
-        "format": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --check .",
-        "format:fix": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write .",
-        "solhint": "solhint --max-error 0 -c ./solhint.json --ignore-path .solhintignore \"contracts/**/*.sol\"",
-        "solhint:fix": "solhint --fix --max-error 0 -c ./solhint.json --ignore-path .solhintignore \"contracts/**/*.sol\"",
+        "solhint": "solhint --max-error 0 -c ./solhint.json \"contracts/**/*.sol\"",
+        "solhint:fix": "solhint --fix --max-error 0 -c ./solhint.json \"contracts/**/*.sol\"",
         "test": "npx hardhat test test/0.integrated.test.ts"
     },
     "devDependencies": {
