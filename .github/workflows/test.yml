@@ -1,0 +1,38 @@
+name: analyze test
+
+on: [push]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup
+        run: yarn install --immutable
+
+  scan:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: lint check
+        run: yarn lint
+      - name: solhint scan
+        run: yarn workspace contract solhint
+      - name: format check
+        run: yarn format
+
+  contract-test:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - uses: actions/checkout@v3
+      - name: hardhat test
+        run: yarn workspace contract test
+
+  frontend-test:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - uses: actions/checkout@v3
+      - name: jest
+        run: yarn workspace client test
