@@ -2,14 +2,18 @@
   "linter": {
     "enabled": true,
     "ignore": [
-      "**/.gitignore"
+      ".yarn/**",
+      "**/.gitignore",
+      "**/.next/**"
     ],
     "rules": {}
   },
   "formatter": {
     "enabled": true,
     "ignore": [
-      "**/.gitignore"
+      ".yarn/**",
+      "**/.gitignore",
+      "**/.next/**"
     ],
     "indentStyle": "space",
     "indentSize": 2

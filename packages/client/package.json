@@ -6,10 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next build && next start",
-    "format": "yarn run rome format .",
-    "format:fix": "yarn run rome format . --write",
-    "lint": "yarn run rome check .",
-    "lint:fix": "yarn run rome check . --apply",
     "test": "jest"
   },
   "dependencies": {
