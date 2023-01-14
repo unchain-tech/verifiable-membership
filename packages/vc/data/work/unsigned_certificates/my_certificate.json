@@ -1,0 +1,16 @@
+{
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://w3id.org/blockcerts/v3"
+    ],
+    "id": "urn:uuid:bbba8553-8ec1-445f-82c9-a57251dd731g",
+    "type": [
+      "VerifiableCredential",
+      "BlockcertsCredential"
+    ],
+    "issuer": "did:web:blockcerts-20230113.storage.googleapis.com",
+    "issuanceDate": "2023-01-04T00:00:00Z",
+    "credentialSubject": {
+      "id": "did:example:ebfeb1f712ebc6f1c276e12ec21"
+    }
+}

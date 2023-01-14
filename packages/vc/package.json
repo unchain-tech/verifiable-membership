@@ -1,0 +1,20 @@
+{
+  "name": "vc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "convert": "node ./scripts/convert.js ./keys/key_file.txt > ./hosting/jwk.json",
+    "create:bucket": "cd hosting && terraform init && terraform apply",
+    "issue:vc": "cert-issuer -c conf.ini"
+  },
+  "keywords": [],
+  "author": "mashharuki",
+  "license": "ISC",
+  "devDependencies": {
+    "@trust/keyto": "^1.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}

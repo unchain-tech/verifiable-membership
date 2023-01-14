@@ -34,8 +34,12 @@
     "format": "yarn run rome format .",
     "format:fix": "yarn run rome format . --write",
     "client": "yarn workspace client",
+    "client:dev": "yarn workspace client dev",
     "contract": "yarn workspace contract",
-    "test": "yarn workspace client test && yarn workspace contract test"
+    "test": "yarn workspace client test && yarn workspace contract test",
+    "convert": "yarn workspace vc convert",
+    "create:bucket": "yarn workspace vc create:bucket",
+    "issue:vc": "yarn workspace vc issue:vc"
   },
   "packageManager": "yarn@3.3.1"
 }
