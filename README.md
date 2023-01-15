@@ -39,3 +39,7 @@ yarn simple-git-hooks
 
 - Hardhat
 - Solhint
+
+## Referrences
+
+1. [BlockCerts® Core API](https://team.iam.api.blockcerts.com/docs/index.html)

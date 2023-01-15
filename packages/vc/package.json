@@ -6,6 +6,7 @@
   "scripts": {
     "convert": "node ./scripts/convert.js ./keys/key_file.txt > ./hosting/jwk.json",
     "create:bucket": "cd hosting && terraform init && terraform apply",
+    "generate:unsignedvc": "node ./scripts/generate-unsign-vc.js",
     "issue:vc": "cert-issuer -c conf.ini"
   },
   "keywords": [],
