@@ -90,7 +90,7 @@ const main = async () => {
     // call generateVC function
     const vc = generateVC();
 
-    const fileName = "smaple.json";
+    const fileName = "sample.json";
     const filePath = path.join(OUPUT_UNSIGNED_VC_DIR, fileName);
 
     fs.writeFileSync(filePath, JSON.stringify(vc));
