@@ -104,7 +104,7 @@
     "**/next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "packages/vc/scripts/convert.js"  ],
   "exclude": [
     "**/node_modules"
   ]

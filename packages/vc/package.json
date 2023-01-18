@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "convert": "node ./scripts/convert.js ./keys/key_file.txt > ./hosting/jwk.json",
     "create:bucket": "cd hosting && terraform init && terraform apply",
