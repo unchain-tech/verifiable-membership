@@ -1,5 +1,6 @@
 import * as fs from 'fs';
-import * as keyto from '@trust/keyto';
+
+const keyto = require('@trust/keyto');
 
 if (require.main === module) {
   main();
@@ -8,11 +9,11 @@ if (require.main === module) {
 /**
  * main method
  */
-function main() {
+async function main() {
   const file = process.argv[2];
   const blk = fs.readFileSync(file, 'utf-8');
-  const key = keyto.from(blk, 'blk');
-  const jwk = keyto.toJwk('public');
+  const jwk = keyto.from(blk, 'blk').toJwk('public');
 
-  console.log(JSON.stringify(jwk, null, 2));
+  console.log(`result:${JSON.stringify(jwk, null, 2)}`);
+  await fs.writeFileSync( "./hosting/jwk.json" , JSON.stringify(jwk, null, 2));
 }
