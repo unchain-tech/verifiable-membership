@@ -8,6 +8,8 @@
     "convert": "yarn node --loader ts-node/esm ./scripts/convert.ts ./keys/key_file.txt > ./hosting/jwk.json",
     "create:bucket": "cd hosting && terraform init && terraform apply",
     "generate:unsignedvc": "yarn node --loader ts-node/esm ./scripts/generate-unsign-vc.ts",
+    "generate:profile": "yarn node --loader ts-node/esm ./scripts/generate-profile.ts",
+    "generate:did": "yarn node --loader ts-node/esm ./scripts/generate-did.ts",
     "issue:vc": "cert-issuer -c conf.ini"
   },
   "keywords": [],
