@@ -41,7 +41,12 @@
     "convert": "yarn workspace vc convert",
     "create:bucket": "yarn workspace vc create:bucket",
     "generate:unsignedvc": "yarn workspace vc generate:unsignedvc",
+    "generate:profile": "yarn workspace vc generate:profile",
+    "generate:did": "yarn workspace vc generate:did",
     "issue:vc": "yarn workspace vc issue:vc"
   },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.3.1",
+  "dependencies": {
+    "@types/node": "^18.11.18"
+  }
 }

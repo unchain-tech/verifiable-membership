@@ -1,0 +1,24 @@
+{
+    "@context": ["https://www.w3.org/ns/did/v1"],
+    "id": "did:web:blockcerts-20230113.storage.googleapis.com",
+    "service": [
+      {
+        "id": "#issuer-profile",
+        "type": "IssuerProfile",
+        "serviceEndpoint": "https://blockcerts-20230113.storage.googleapis.com/profile.json"
+      }
+    ],
+    "verificationMethod": [
+      {
+        "id": "#key-1",
+        "controller": "did:web:blockcerts-20230113.storage.googleapis.com",
+        "type": "EcdsaSecp256k1VerificationKey2019",
+        "publicKeyJwk": {
+          "kty": "EC",
+          "crv": "K-256",
+          "x": "OHmMFsX67nr0mWHdZLNQMwu4P59RigMgrIwQ5vftVug",
+          "y": "IURb-5IMAAa2LW-KgjwULTP7SnsUBdmbrMY0s6FwpLA"
+        }
+      }
+    ]
+}

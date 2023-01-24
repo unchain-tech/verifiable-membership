@@ -1,0 +1,16 @@
+{
+    "@context": [
+      "https://w3id.org/openbadges/v2",
+      "https://w3id.org/blockcerts/v3"
+    ],
+    "id": "https://blockcerts-20230113.storage.googleapis.com/profile.json",
+    "type": "Profile",
+    "name": "mashharuki",
+    "url": "https://www.resume.id/haru28675#_=_",
+    "email": "blockcerts@gmail.com",
+    "publicKey": [
+      {
+        "id": "ecdsa-koblitz-pubkey:0x51908F598A5e0d8F1A3bAbFa6DF76F9704daD072"
+      }
+    ]
+}
