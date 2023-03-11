@@ -3,7 +3,9 @@ coverage
 coverage.json
 .openzeppelin
 .DS_Store
-
+.tmp
+.cert-issuer-conf
+.cert-issuer-pk-issuer
 
 #Hardhat files
 cache

@@ -1,0 +1,19 @@
+# issuer の ethereumアドレス
+issuing_address=
+
+#
+verification_method=did:ethr:0x4a983E755ED2B7340fdFEc8C6a1A6A42acfc85E7
+
+usb_name=.
+
+# .cert-issuer-pkを作成して、issuerの秘密鍵をBIP32で保存してください
+key_file=./.cert-issuer-pk
+
+unsigned_certificates_dir=./cert-issuer/unsigned_certificates
+blockchain_certificates_dir=./cert-issuer/blockchain_certificates
+work_dir=./cert-issuer/work
+
+chain = ethereum_goerli
+goerli_rpc_url = https://eth-goerli.g.alchemy.com/v2/####
+
+no_safe_mode
