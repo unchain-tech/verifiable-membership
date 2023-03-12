@@ -2,6 +2,36 @@
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
 
+  "files.exclude": {
+    // OS
+    "**/.DS_Store": true,
+    // editor
+    ".vscode": true,
+    // git
+    "**/.git": true,
+    "**/.gitignore": true,
+    // gitlab
+    "**/.gitlab": true,
+    "**/.gitlab-ci.yml": true,
+    // javascript
+    "**/node_modules": true,
+    // ruby
+    "**/.bundle": true,
+    "**/.rubocop*": true,
+    // ruby on rails
+
+    // workspace
+    "**/db": true,
+    "**/log": true,
+    "**/tmp": true,
+
+    // settings
+    ".yarnrc.yml": true,
+    ".lintstagedrc.js": true,
+    ".yarn": true
+  },
+
+  // rome
   "[typescriptreact]": {
     "editor.defaultFormatter": "rome.rome"
   },

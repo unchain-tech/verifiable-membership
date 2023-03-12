@@ -5,10 +5,10 @@ import * as fs from 'fs';
 import env from 'dotenv';
 
 import { ethereum_pk_to_jwk } from '@issuer/ethereum_pk_to';
-import profile_skelton from "./profile.skelton.json"
-import ddo_skelton from "./did.skelton.json"
-import signed_credential_skelton from "./signed_credential.skelton.json"
-import unsigned_credential_skelton from "./unsigned_credential.skelton.json"
+import profile_skelton from './skels/profile.json';
+import ddo_skelton from './skels/did.json';
+import signed_credential_skelton from './skels/signed_credential.json';
+import unsigned_credential_skelton from './skels/unsigned_credential.json';
 
 env.config();
 const dotenv = process.env;
@@ -16,9 +16,8 @@ const dotenv = process.env;
 /**
  * gurad
  */
-if(require.main != module) throw new Error('This script is not a module');
-if(typeof dotenv.ISSUER_ETH_ADDRESS_KEY != "string") { throw new Error('ISSUER_PRIVATE_KEY is not defined'); }
-if(typeof dotenv.ISSUER_PRIVATE_KEY != "string") { throw new Error('ISSUER_PRIVATE_KEY is not defined'); }
+if(typeof dotenv.ISSUER_ETH_ADDRESS_KEY !== "string") { throw new Error('ISSUER_PRIVATE_KEY is not defined'); }
+if(typeof dotenv.ISSUER_PRIVATE_KEY !== "string") { throw new Error('ISSUER_PRIVATE_KEY is not defined'); }
 
 
 /**
@@ -53,7 +52,7 @@ if (typeof dotenv.ISSUER_PROFILE_DESCRIPTION === "string" ) prifle.description =
 if (typeof dotenv.ISSUER_PROFILE_EMAIL === "string" ) prifle.email = dotenv.ISSUER_PROFILE_EMAIL
 if (typeof dotenv.ISSUER_PROFILE_URL === "string" ) prifle.url = dotenv.ISSUER_PROFILE_URL
 
-prifle.publicKey[0].id = 'ecdsa-koblitz-pubkey:' + dotenv.ISSUER_ETH_ADDRESS_KEY;
+prifle.publicKey[0].id = `ecdsa-koblitz-pubkey:${dotenv.ISSUER_ETH_ADDRESS_KEY}`;
 prifle.publicKey[0].created = new Date().toISOString();
 
 

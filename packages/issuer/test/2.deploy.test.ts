@@ -1,4 +1,5 @@
 const { expect } = require("chai");
+import ethers from 'ethers';
 
 describe("Token contract", function () {
   it("Deployment should assign the total supply of tokens to the owner", async function () {

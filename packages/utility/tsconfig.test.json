@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "paths": {
+      "@utility": ["lib"]
+    }
+  },
+  "include": ["lib/**/*", "tests/**/*"]
+}

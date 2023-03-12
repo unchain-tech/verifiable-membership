@@ -1,0 +1,12 @@
+{
+  "id": "",
+  "controller": "",
+  "type": "",
+  "publicKeyJwk": {
+    "crv": "",
+    "x": "",
+    "y": "",
+    "kty": ""
+  },
+  "publicKeyMultibase": ""
+}
