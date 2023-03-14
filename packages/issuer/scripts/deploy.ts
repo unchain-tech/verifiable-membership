@@ -1,17 +1,21 @@
-import { ethers, upgrades } from 'hardhat';
+import { ethers } from 'hardhat';
 
 async function main() {
-  const contractFactory = await ethers.getContractFactory(
-    'VerifiableMembership',
+  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
+  const unlockTime = currentTimestampInSeconds + 60;
+
+  const lockedAmount = ethers.utils.parseEther('0.001');
+
+  const Contract = await ethers.getContractFactory('CertificateStore');
+  const contract = await Contract.deploy(unlockTime, { value: lockedAmount });
+
+  await contract.deployed();
+
+  console.log(
+    `Lock with ${ethers.utils.formatEther(
+      lockedAmount,
+    )}ETH and unlock timestamp ${unlockTime} deployed to ${contract.address}`,
   );
-
-  const contract = await upgrades.deployProxy(contractFactory);
-  console.log('Contract deployed to:', contract.address);
-
-  //const contractFactory_v2 = await ethers.getContractFactory('VerifiableMembership_v2');
-  //const contract_v2 = await upgrades.upgradeProxy(contract.address, contractFactory_v2);
-  //await contract_v2.deployed();
-  // console.log('Contract upgraded to:', v2Contract.address);
 }
 
 main().catch((error) => {

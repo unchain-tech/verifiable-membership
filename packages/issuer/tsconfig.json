@@ -1,5 +1,4 @@
 {
-  //   "extends": "./../../tsconfig.json",
   "compilerOptions": {
     "target": "es2020",
     "module": "commonjs",
@@ -13,10 +12,10 @@
     "baseUrl": ".",
     "paths": {
       "@issuer/*": ["src/*"],
-      "@conf/*": ["conf/*"]
+      "@config/*": ["config/*"]
     }
   },
-  "include": ["src/**/*", "scripts/**/*"],
+  "include": ["src/**/*", "scripts/**/*", "config/**/*"],
   "exclude": ["node_modules", "dist", "contracts"],
   "ts-node": {
     "esm": true,

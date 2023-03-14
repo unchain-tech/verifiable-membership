@@ -9,10 +9,8 @@ import type {
 export interface IDidDocument {
   /** The standard context for DID Documents. */
   '@context':
-    | 'https://w3id.org/did/v1'
     | 'https://www.w3.org/ns/did/v1'
-    | ['https://w3id.org/did/v1', ...string[]]
-    | ['https://www.w3.org/ns/did/v1', ...string[]];
+    | ['https://www.w3.org/ns/did/v1', 'https://w3id.org/security/suites/jws-2020/v1'];
   /** The DID to which this DID Document pertains. */
   id: string;
   /** Array of public keys associated with the DID. */

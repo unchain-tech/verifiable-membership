@@ -1,9 +1,0 @@
-
-# did
-- https://www.w3.org/ns/did/v1/jsonld
-
-# profile
-
-# credential
-
-

@@ -1,3 +1,10 @@
+// import type { JsonLDContext } from '@blockcerts/cert-verifier-js';
+
+// export declare type CertIssuerProfileContext = [
+//   'https://w3id.org/openbadges/v2',
+//   'https://w3id.org/blockcerts/v3',
+// ] &
+//   JsonLDContext;
 
 export interface ICertIssuerProfile {
   '@context': [

@@ -2,15 +2,24 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { UnsignedCertficate, SignedCertficate, IIssuer } from './';
 
-import type { IUnsignedCertficate, ISignedCertficate } from './';
+import type { IUnsignedCertficate, ISignedCertficate, IHolder } from './';
 
-export function CertficateFactory() {
-  const unsignedCertficate = (
+// import type { BlockcertsV3 } from '@blockcerts/cert-verifier-js';
+
+export function CertificateFactory() {
+  const createUnsignedCertificate = (
     issuer: IIssuer,
-    holderDid: string,
+    holder: IHolder,
   ): UnsignedCertficate => {
     //
     const created_at = new Date().toISOString();
+    const issuerProfile = issuer.service?.find((service) => {
+      return service.type === 'IssuerProfile';
+    });
+
+    if (issuerProfile === undefined || issuerProfile === null) {
+      throw new Error('IssuerProfile is not found.');
+    }
 
     const json: IUnsignedCertficate = {
       '@context': [
@@ -19,17 +28,18 @@ export function CertficateFactory() {
       ],
       id: `urn:uuid:${uuidv4()}`,
       type: ['VerifiableCredential', 'BlockcertsCredential'],
-      issuer: issuer.id,
+      issuer: issuerProfile.serviceEndpoint,
       issuanceDate: created_at,
       credentialSubject: {
-        id: holderDid,
+        id: holder.ethereumAddress,
+        name: holder.name,
       },
     };
 
     return new UnsignedCertficate(json);
   };
 
-  const signedCertficate = (
+  const createSignedCertificate = (
     issuer: IIssuer,
     holderDid: string,
   ): SignedCertficate => {
@@ -62,5 +72,5 @@ export function CertficateFactory() {
     return new SignedCertficate(json);
   };
 
-  return { unsignedCertficate, signedCertficate };
+  return { createSignedCertificate, createUnsignedCertificate };
 }
