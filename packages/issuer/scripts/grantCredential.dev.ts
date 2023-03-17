@@ -7,15 +7,6 @@ import { validateRequiredEnvVarsType } from './util/requiredVarsValid';
 import issuer from '@config/did.json';
 import { holders } from '@config/holder.json';
 
-const requiredVars = [
-  'ISSUER_DDO_ID',
-  'ISSUER_PRIVATE_KEY',
-  'ISSUER_DDO_SERVICE_EP',
-  'ISSUER_PROFILE_HOST_URL',
-  'ISSUER_PROFILE_NAME',
-];
-const sanitizedEnv = validateRequiredEnvVarsType(requiredVars);
-
 const { createUnsignedCertificate } = CertificateFactory();
 
 const unsignedCertificates: IUnsignedCertficate[] = [];
