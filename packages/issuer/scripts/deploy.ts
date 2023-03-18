@@ -6,8 +6,10 @@ async function main() {
 
   const lockedAmount = ethers.utils.parseEther('0.001');
 
-  const Contract = await ethers.getContractFactory('CertificateStore');
-  const contract = await Contract.deploy(unlockTime, { value: lockedAmount });
+  const EthereumDIDRegistry = await ethers.getContractFactory(
+    'EthereumDIDRegistry',
+  );
+  const contract = await EthereumDIDRegistry.deploy();
 
   await contract.deployed();
 
@@ -18,6 +20,8 @@ async function main() {
   );
 }
 
+// We recommend this pattern to be able to use async/await everywhere
+// and properly handle errors.
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;

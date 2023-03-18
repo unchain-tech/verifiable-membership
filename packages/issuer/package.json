@@ -7,9 +7,8 @@
     "solhint": "solhint --max-error 0 -c ./solhint.json \"contracts/**/*.sol\"",
     "solhint:fix": "solhint --fix --max-error 0 -c ./solhint.json \"contracts/**/*.sol\"",
     "test": "npx hardhat test test/0.integrated.test.ts",
-    "setup:cert-issuer": "git clone https://github.com/blockchain-certificates/cert-issuer.git -b v3.3.0 .tmp/cert-issuer && cd .tmp/cert-issuer && python setup.py experimental --blockchain=ethereum install && cd ../..",
     "setup:issuer": "yarn node --loader ts-node/esm scripts/setupIssuer.ts",
-    "devnet": "hardhat --config hardhat.dev.config.ts node",
+    "devnet": "hardhat --config hardhat.devnet.config.ts node",
     "grant:devnet": "cert-issuer -c ./config/.cert-issuer.devnet.conf --chain ethereum_goerli --goerli_rpc_url http://127.0.0.1:8545/",
     "grant:testnet": "cert-issuer -c ./config/.cert-issuer.testnet.conf --chain ethereum_goerli",
     "credential:test": "yarn node --loader ts-node/esm test/credential.test.ts"
