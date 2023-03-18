@@ -10,6 +10,8 @@
     "setup:issuer": "yarn node --loader ts-node/esm scripts/setupIssuer.ts",
     "devnet": "hardhat --config hardhat.devnet.config.ts node",
     "devnet:deploy": "npx hardhat run --network localhost scripts/deploy.ts ",
+    "devnet:resolve": "npx hardhat run --network localhost scripts/resolve.ts ",
+    "devnet:regist": "npx hardhat run --network localhost scripts/regist.ts ",
     "grant:devnet": "cert-issuer -c ./config/.cert-issuer.devnet.conf --chain ethereum_goerli --goerli_rpc_url http://127.0.0.1:8545/",
     "grant:testnet": "cert-issuer -c ./config/.cert-issuer.testnet.conf --chain ethereum_goerli",
     "credential:test": "yarn node --loader ts-node/esm test/credential.test.ts"
@@ -48,6 +50,8 @@
     "bip32": "^4.0.0",
     "bitcoinjs-lib": "^6.1.0",
     "ecpair": "^2.1.0",
+    "ethr-did": "^2.3.6",
+    "ethr-did-resolver": "^8.0.0",
     "tiny-secp256k1": "^2.2.1",
     "uuid": "^9.0.0"
   },

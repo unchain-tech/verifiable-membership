@@ -16,3 +16,6 @@ dist
 typechain
 types
 typechain-types
+
+#editorconfig
+.vscode
