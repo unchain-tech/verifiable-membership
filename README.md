@@ -5,7 +5,8 @@
 ```
 packages
    |__ client
-   |__ contract
+   |__ issuer
+   |__ utility
    |__ vc
 ```
 

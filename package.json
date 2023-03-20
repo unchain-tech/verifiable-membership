@@ -12,8 +12,9 @@
   },
   "author": "SHØ <neila@users.noreply.github.com> (https://github.com/neila)",
   "contributors": [
-    "SHØ <neila@users.noreply.github.com> (https://github.com/neila)",
-    "mashharuki <avp.104.106.107@ae.auone-net.jp> (https://github.com/mashharuki)"
+    "mashharuki <avp.104.106.107@ae.auone-net.jp> (https://github.com/mashharuki)",
+    "nc163 <kou1992@gmail.com> (https://github.com/nc163)",
+    "SHØ <neila@users.noreply.github.com> (https://github.com/neila)"
   ],
   "devDependencies": {
     "ajv": "^8.12.0",
@@ -36,9 +37,9 @@
     "format:fix": "yarn run rome format . --write",
     "client": "yarn workspace client",
     "client:dev": "yarn workspace client dev",
-    "contract": "yarn workspace contract",
+    "issuer": "yarn workspace issuer",
     "vc": "yarn workspace vc",
-    "test": "yarn workspace client test && yarn workspace contract test",
+    "test": "yarn workspace client test && yarn workspace issuer test",
     "convert": "yarn workspace vc convert",
     "create:bucket": "yarn workspace vc create:bucket",
     "generate:unsignedvc": "yarn workspace vc generate:unsignedvc",
