@@ -5,7 +5,9 @@ import env from 'dotenv';
  * @param requiredVars
  * @returns
  */
-export function validateRequiredEnvVarsType(requiredVars: string[]): any {
+export function validateRequiredEnvVarsType(requiredVars: string[]): {
+  string?: string;
+} {
   env.config();
 
   const envVars = {};

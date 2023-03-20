@@ -69,6 +69,7 @@ export function CertificateFactory() {
 
     throw new Error('Not implemented');
 
+    // rome-ignore lint/correctness/noUnreachable: <`1660529dbca913d3f7b9b1c579851646591939ce`時点の実装だと70行目の `throw Error` が必ず実行されるので `return SignedCertificate(json)` に辿り着かない。要修正>
     return new SignedCertficate(json);
   };
 
