@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig",
+  "resolveJsonModule": true,
+  "compilerOptions": {
+    "paths": {
+      "@utility": ["lib"]
+    }
+  },
+  "include": ["lib/**/*", "tests/**/*"]
+}

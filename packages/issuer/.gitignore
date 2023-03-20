@@ -1,0 +1,21 @@
+node_modules
+coverage
+coverage.json
+.openzeppelin
+.DS_Store
+.tmp
+.cert-issuer-conf
+.cert-issuer-pk-issuer
+
+#Hardhat files
+cache
+artifacts
+dist
+
+#typechain
+typechain
+types
+typechain-types
+
+#editorconfig
+.vscode

@@ -1,0 +1,31 @@
+{
+  "@context": ["https://www.w3.org/ns/did/v1"],
+  "id": "",
+  "alsoKnownAs": "",
+  "controller": "",
+  "verificationMethod": [
+    {
+      "id": "",
+      "controller": "",
+      "type": "",
+      "publicKeyMultibase": "",
+      "publicKeyJwk": {
+        "crv": "",
+        "x": "",
+        "y": "",
+        "kty": ""
+      }
+    }
+  ],
+  "authentication": [],
+  "keyAgreement": [],
+  "capabilityInvocation": "",
+  "capabilityDelegation": "",
+  "service": [
+    {
+      "id": "",
+      "type": "",
+      "serviceEndpoint": ""
+    }
+  ]
+}

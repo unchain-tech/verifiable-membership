@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://w3id.org/openbadges/v2",
+    "https://w3id.org/blockcerts/3.0"
+  ],
+  "type": "Profile",
+  "id": "",
+  "name": "",
+  "description": "",
+  "email": "",
+  "url": "",
+  "publicKey": [
+    {
+      "id": "",
+      "created": ""
+    }
+  ],
+  "image": ""
+}

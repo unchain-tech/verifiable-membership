@@ -1,0 +1,14 @@
+issuing_address=
+verification_method=
+usb_name=.
+key_file=./config/.cert-issuer-pk
+
+unsigned_certificates_dir=./dist/unsigned_certificates
+blockchain_certificates_dir=./dist/blockchain_certificates
+work_dir=./dist/work
+
+chain=
+
+goerli_rpc_url =
+
+no_safe_mode

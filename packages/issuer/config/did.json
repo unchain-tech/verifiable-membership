@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "did:web:nc163.github.io:.well-known",
+  "verificationMethod": [
+    {
+      "id": "did:web:nc163.github.io:.well-known#key-1",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "controller": "did:web:nc163.github.io:.well-known",
+      "publicKeyJwk": {
+        "kty": "EC",
+        "crv": "K-256",
+        "x": "gxhTW1QQXUp6rmDAj8RflocYG0_fxiW9GnU_pzl_7XU",
+        "y": "NUfxHKhpZkby86ywjjEBavrCPmMMXRH1n2H-9XsNKqU"
+      }
+    }
+  ],
+  "authentication": [
+    "did:web:nc163.github.io:.well-known#key-1"
+  ],
+  "service": [
+    {
+      "id": "did:web:nc163.github.io:.well-known#service-1",
+      "type": "IssuerProfile",
+      "serviceEndpoint": "https://nc163.github.io/.well-known/profile.json"
+    }
+  ]
+}

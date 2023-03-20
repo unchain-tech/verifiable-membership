@@ -10,7 +10,7 @@ jobs:
       - uses: actions/cache@v3
         id: yarn-cache
         with:
-          path: '**/node_modules'
+          path: "**/node_modules"
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: setup
         if: steps.yarn-cache.outputs.cache-hit != 'true'
@@ -23,12 +23,12 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
         with:
-          path: '**/node_modules'
+          path: "**/node_modules"
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: lint check
         run: yarn lint
       - name: solhint scan
-        run: yarn workspace contract solhint
+        run: yarn workspace issuer solhint
       - name: format check
         run: yarn format
 
@@ -39,10 +39,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
         with:
-          path: '**/node_modules'
+          path: "**/node_modules"
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: hardhat test
-        run: yarn workspace contract test
+        run: yarn workspace issuer test
 
   frontend-test:
     runs-on: ubuntu-latest
@@ -51,7 +51,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
         with:
-          path: '**/node_modules'
+          path: "**/node_modules"
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: jest
         run: yarn workspace client test
