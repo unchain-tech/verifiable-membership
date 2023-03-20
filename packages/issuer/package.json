@@ -6,7 +6,7 @@
   "scripts": {
     "solhint": "solhint --max-warnings 0 -c ./solhint.json \"contracts/**/*.sol\"",
     "solhint:fix": "solhint --fix --max-warnings 0 -c ./solhint.json \"contracts/**/*.sol\"",
-    "test": "npx hardhat test test/0.integrated.test.ts",
+    "test": "npx hardhat test test/credential.test.ts",
     "setup:issuer": "yarn node --loader ts-node/esm scripts/setupIssuer.ts",
     "devnet": "hardhat --config hardhat.devnet.config.ts node",
     "devnet:deploy": "npx hardhat run --network localhost scripts/deploy.ts ",
